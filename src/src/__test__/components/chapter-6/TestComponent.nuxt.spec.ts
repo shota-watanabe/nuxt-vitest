@@ -44,8 +44,8 @@ describe('src/components/chapter-6/TestComponent.vue', () => {
     expect(buttonComponent.props('handleClick')).toBeDefined();
 
     // .props()を使用して、子コンポーネントに渡したPropsを取得
-    expect(childComponents[0].props('label')).toBe('Label 1');
-    expect(childComponents[1].props('label')).toBe('Label 2');
+    expect(childComponents[0]?.props('label')).toBe('Label 1');
+    expect(childComponents[1]?.props('label')).toBe('Label 2');
 
     // trigger(): イベントをシミュレートするメソッド
     await buttonComponent.trigger('click');
